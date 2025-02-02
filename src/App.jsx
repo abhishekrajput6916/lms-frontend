@@ -1,20 +1,25 @@
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <>
       <Navbar />
-      <div className={"bg-rose-500 "}>
-        Hello World
-      </div>
       <Routes>
-        <Route path="/" element={<h1>Hii from Home</h1>} />
-        <Route path="/about" element={<h1>Hii from About</h1>} />
+        <Route path="/" element={
+          <div className="container mx-auto px-4">
+            <h1 className="text-3xl font-bold my-6">Hii from Home</h1>
+          </div>
+        } />
+        <Route path="/about" element={
+           <div className="container mx-auto px-4">
+           <h1 className="text-3xl font-bold my-6">
+            Hello from About</h1>
+         </div>
+        } />
       </Routes>
     </>
   );
